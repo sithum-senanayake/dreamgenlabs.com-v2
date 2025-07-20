@@ -3,6 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: #1145be;
+  --light-blue: #3467a9;
+  --dark-blue: #114084;
+  --secondary: #81b7db;
+  --white: #ffffff;
+  --black: #000000;
+  --gradient-blue-start: #1145be;
+  --gradient-blue-end: #00c6ff;
+
+  --font-sans: "Geist Sans", sans-serif;
+  --font-mono: "Geist Mono", monospace;
 }
 
 @theme inline {
