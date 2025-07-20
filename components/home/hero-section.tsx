@@ -9,7 +9,6 @@ interface HeroSectionProps {
 const HeroSection = ({ isVisible }: HeroSectionProps) => {
   return (
     <div className="relative px-8 py-20">
-      <BackgroundEffects />
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <h1
@@ -30,10 +29,8 @@ const HeroSection = ({ isVisible }: HeroSectionProps) => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          Welcome To DreamGen Labs. Your Gateway To Innovative Web Development
-          And Digital Marketing Solutions. Explore Our Impactful Strategies
-          Tailored To Your Needs. Let&apos;s Get Started On Unlocking The Full
-          Potential Of Your Online Presence Today.
+          Welcome to DreamGen Labs. Your gateway to innovative web development and digital marketing solutions. 
+          Let&apos;s Get Started On Unlocking The Full Potential Of Your Online Presence Today.
         </p>
 
         <div
@@ -49,6 +46,9 @@ const HeroSection = ({ isVisible }: HeroSectionProps) => {
           </Link>
         </div>
       </div>
+
+      <BackgroundEffects />
+
     </div>
   );
 };

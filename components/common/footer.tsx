@@ -7,6 +7,7 @@ import {
   Globe,
   Instagram,
   Linkedin,
+  Github,
   Mail,
   MapPin,
   Phone,
@@ -18,6 +19,7 @@ import {
   Youtube
 } from "lucide-react";
 import { JSX, useState } from "react";
+import FloatingParticlesEffects from "./effects/floating-particles-effects";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -75,17 +77,17 @@ const Footer = () => {
     {
       title: "Company",
       links: [
-        { name: "About Us", href: "#" },
+        { name: "About Us", href: "/about" },
         { name: "Our Team", href: "#" },
-        { name: "Careers", href: "#" },
-        { name: "Case Studies", href: "#" },
-        { name: "Blog", href: "#" },
+        { name: "Careers", href: "/careers" },
+        { name: "Projects", href: "/projects" },
+        { name: "Blog", href: "/blog" },
       ],
     },
     {
       title: "Support",
       links: [
-        { name: "Contact Us", href: "#" },
+        { name: "Contact Us", href: "/contact" },
         { name: "Help Center", href: "#" },
         { name: "Documentation", href: "#" },
         { name: "API Reference", href: "#" },
@@ -108,32 +110,32 @@ const Footer = () => {
     {
       name: "Facebook",
       icon: <Facebook className="w-5 h-5" />,
-      href: "#",
+      href: "https://www.facebook.com/profile.php?id=61558384975264&mibextid=LQQJ4d",
       color: "hover:text-blue-400",
     },
     {
       name: "Twitter",
       icon: <Twitter className="w-5 h-5" />,
-      href: "#",
+      href: "https://x.com/dreamgenlabs",
       color: "hover:text-sky-400",
     },
     {
       name: "Instagram",
       icon: <Instagram className="w-5 h-5" />,
-      href: "#",
+      href: "https://www.instagram.com/dreamgenlabs/",
       color: "hover:text-pink-400",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
-      href: "#",
+      href: "https://www.linkedin.com/company/dreamgen-labs/",
       color: "hover:text-blue-600",
     },
     {
-      name: "YouTube",
-      icon: <Youtube className="w-5 h-5" />,
-      href: "#",
-      color: "hover:text-red-400",
+      name: "GitHub",
+      icon: <Github className="w-5 h-5" />,
+      href: "https://github.com/DreamGen-Labs",
+      color: "hover:text-gray-400",
     },
   ];
 
@@ -146,13 +148,13 @@ const Footer = () => {
     },
     {
       icon: <Phone className="w-5 h-5" />,
-      text: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      text: "+94 75 876 7262",
+      href: "tel:+94758767262",
       color: "text-green-400",
     },
     {
       icon: <MapPin className="w-5 h-5" />,
-      text: "New York, NY 10001",
+      text: "191/2A, Godallawatta Thalangama South, Battaramulla, 10120, Sri Lanka",
       href: "#",
       color: "text-purple-400",
     },
@@ -174,7 +176,7 @@ const Footer = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Stay Updated with Our
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#1145be] to-[#00c6ff] bg-clip-text text-transparent">
                   {" "}
                   Newsletter
                 </span>
@@ -204,7 +206,7 @@ const Footer = () => {
                   />
                   <button
                     onClick={handleNewsletterSubmit}
-                    className="group relative inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    className="group relative inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#1145be] to-[#00c6ff] text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     <Send className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
@@ -222,7 +224,7 @@ const Footer = () => {
               <div className="lg:col-span-2">
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold mb-4">
-                    <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#1145be] to-[#00c6ff] bg-clip-text text-transparent">
                       DreamGen Labs
                     </span>
                   </h3>
@@ -328,20 +330,7 @@ const Footer = () => {
       </div>
 
       {/* Floating Particles */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-blue-400/10 rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 4}s`,
-              animationDuration: `${3 + Math.random() * 3}s`,
-            }}
-          ></div>
-        ))}
-      </div>
+      <FloatingParticlesEffects />
     </footer>
   );
 };

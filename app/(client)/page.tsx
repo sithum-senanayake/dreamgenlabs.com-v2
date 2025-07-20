@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <HeroSection isVisible={isVisible} />
       <GallerySection />
-      <GlobalEffects />
+      {/* <GlobalEffects /> */}
       {/* <WhyUsSection isVisible={isVisible} /> */}
       <DifferentiatorsSection />
       <Testimonials />
